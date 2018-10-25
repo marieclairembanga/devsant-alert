@@ -1,0 +1,27 @@
+<ion-view view-title="Gestions des appartements">
+  <ion-content>
+    <h5 class="content padding double-padding-x">Enregistrement dun appart</h5>
+    <div class="row responsive-sm padding remvoeBP">
+      <div class="col">
+
+        <form ng-submit="Appart()">
+          <div class="list list-inset removePM">
+            <label class="item item-input"><input type="text" placeholder="Nom appart" ng-model="loginData.name"> </label>
+            <label class="item item-input"><input type="text" placeholder="niveau" ng-model="loginData.niveau"> </label>
+            <label class="item item-input"><input type="text" placeholder="meuble ( oui /non )" ng-model="loginData.meuble"> </label>
+            <label class="item item-input"><input type="text" placeholder="Type d'appart ( commercial /habitat ) " ng-model="loginData.type"> </label>
+            <label class="item item-input"><input type="text" placeholder="declaré" ng-model="loginData.declare"> </label>
+            <label class="item item-input"><input type="number" placeholder="Montant" ng-model="loginData.mt"> </label>
+
+
+          </div>
+
+          <div class="loginButton"><button class="button ion-person button-block button-balanced" type="submit"> save </button>  </div>
+
+        </form>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

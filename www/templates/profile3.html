@@ -1,0 +1,50 @@
+<ion-view view-title="locataire">
+  <ion-content>
+
+    <div class="list card">
+
+      <div class="item item-avatar" ng-repeat="profile in detail">
+
+        <img ng-src="{{url}}logo/avatar_defaut.png" height="100" width="100" style="border-radius: 50px">
+        <h2><span style="font-size: 13px; font-weight: bold; color: #005efe;">{{profile.NomLocataire}}</span></h2>
+
+      </div>
+
+      <div class="item item-body" ng-repeat="profile in detail">
+        <p>
+          telephone :  <span style="font-size: 14px; font-weight: bold; color: #005efe;">{{profile.Telephone}}  </span><br><br>
+          Email :   <span style="font-size: 14px; font-weight: bold; color: #005efe;">{{profile.Email}}  </span><br><br>
+          Numero de CNI :   <span style="font-size: 14px; font-weight: bold; color: #005efe;">{{profile.NumMat}}  </span><br><br>
+          Addresse Postale :   <span style="font-size: 14px; font-weight: bold; color: #005efe;">{{profile.AddPost}}  </span><br><br>
+         Marque de voiture :   <span style="font-size: 14px; font-weight: bold; color: #005efe;">{{profile.MarqueVoiture}}  </span><br><br>
+          Numero imatriculation :   <span style="font-size: 14px; font-weight: bold; color: #005efe;">{{profile.NumMatVoiture}}  </span><br><br>
+        </p>
+
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left" ng-repeat="profile in detail">
+        <a class="tab-item" href="#/app/achat/{{profile.IdLocataire}}" style="color: #000088; font-size: 12px"> <i class="icon ion-android-cart"></i> Achat </a>
+        <a class="tab-item" href="#/app/paiement/{{profile.IdLocataire}}" style="color: #000088; font-size: 12px"> <i class="icon ion-android-notifications"></i> paiement </a>
+        <a class="tab-item" href="#/app/modify/{{profile.IdLocataire}}" style="color: #000088; font-size: 12px" ng-if="acces=='admin'"> <i class="icon ion-android-menu"></i> Modifier</a>
+        <a class="tab-item" href="#" style="color: #d91e18; font-size: 10px" ng-click="supp2(profile.IdLocataire)" ng-if="acces=='admin'"> <i class="icon ion-android-delete" style="color: #d91e18;"></i>  Suprimer</a>
+
+
+      </div>
+    </div>
+    <ion-list >
+      <h4 class="content padding double-padding-x" ng-repeat="profile in detail">Liste des achats effectués<a class=" ion-android-add-circle"  href="#/app/achat/{{profile.IdLocataire}}" style="float: right; font-size: 30px" > </a></h4>
+      <div class="list animate-fade-slide-in-right">
+        <ion-item ng-repeat="b in profile" class="item item-avatar" href="#/app/paiement1/{{b.IdAppart}}/{{b.IdLocataire}}">
+          <img ng-src="{{url}}logo/Hand.png" height="45" width="45">
+          <div class="nom" style="color: #0000fe;">numero compteur {{b.NumCompteur}}</div>
+          <div class="detail">montant : {{b.Montant}} <br> Caution : {{b.Caution}}<br> Charge : {{b.Charge}}<br> Date debut : {{b.DateDebut}}<br> Date fin : {{b.DateFin}}</div>
+          <div class="appart">{{b.Categorie}}</div><br><br>
+          <div ng-if="b.RappelPaiem == 'payer'" style="float: left; color: blue;"> <i class="icon ion-android-checkmark-circle" style="color: blue;"></i> payer </div>
+          <div ng-if="b.RappelPaiem == 'impayer'" style="float: left; color: red;"> <i class="icon ion-android-cancel" style="color: red;"></i> impayer </div>
+
+        </ion-item>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
+

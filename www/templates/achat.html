@@ -1,0 +1,53 @@
+<ion-view view-title="Achat">
+  <ion-content >
+
+    <h4 class="content padding double-padding-x" ng-repeat="profile in profile">Achats de louer</h4>
+    <form ng-submit="achatl()">
+
+      <div class="list list-inset removePM">
+      <label class = "item item-input item-select">
+        <div class = "input-label" >
+          Selectionner le local
+        </div>
+
+        <select ng-model="select" ng-change="showSelectValue(select)">
+          <option value="{{b.IdLocal}}" ng-repeat="b in profil">{{b.NomLocal}}</option>
+        </select>
+      </label>
+        <label class = "item item-input item-select">
+          <div class = "input-label" >
+            Selectionner l'appartement
+          </div>
+
+          <select ng-model="select1" ng-change="showSelectValu(select1)">
+            <option value="{{b.IdAppart}}" ng-repeat="b in detail">{{b.NomAppart}}</option>
+          </select>
+    </label>
+      <label class="item item-input"><input type="number" ng-model="loginData.mtloyer"  ng-repeat="b in mont"  placeholder="prix : {{b.Montant}}" readonly> </label>
+      <label class="item item-input"><input type="number" ng-model="loginData.charge" placeholder="charges" > </label>
+      <label class="item item-input"><input type="number" ng-model="loginData.prloyer" placeholder="periode du loyer (chiffre des mois)" > </label>
+        <label class="item item-input"><input type="text" ng-model="loginData.ddloyer" placeholder="date de debut, Format AAAA-MM-JJ " > </label>
+        <label class="item item-input"><input type="text" ng-model="loginData.dfloyer" placeholder="dete de fin,  Format AAAA-MM-JJ " > </label>
+        <label class="item item-input"><input type="text" ng-model="loginData.dpreavis" placeholder="date de preavie, Format AAAA-MM-JJ " > </label>
+        <label class="item item-input"><input type="text" ng-model="loginData.drcontrat" placeholder="date de revision, Format AAAA-MM-JJ " > </label>
+      <label class="item item-input"><input type="number" ng-model="loginData.caution" placeholder="Caution" > </label>
+      <label class = "item item-input item-select">
+        <div class = "input-label" style="color: #0a9ec7;" >
+          Categorie locataire
+        </div>
+
+        <select ng-model="loginData.cat">
+          <option value="declare" >declare</option>
+
+          <option value="non declare" >non declare</option>
+        </select>
+      </label>
+        <label class="item item-input"><input type="number" ng-model="loginData.numero" placeholder="Numero Compteur" > </label>
+        <label class="item item-input"><input type="text" ng-model="loginData.cpteur" placeholder="Index Compteur" > </label>
+        <label class="item item-input"><input type="text" ng-model="loginData.condition" placeholder="Condition de payement" > </label>
+
+        <div class="loginButton"><button class="button ios-arrow-dropright-circle-outline button-block button-balanced" type="submit"> Suivant </button>  </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

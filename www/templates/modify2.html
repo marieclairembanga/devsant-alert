@@ -1,0 +1,26 @@
+<ion-view view-title="Modifier les informations d'un utilisateur ">
+  <ion-content >
+    <div class="" ng-repeat="b in profile">
+      <h5 class="content padding double-padding-x" >Modification de la residence :  {{b.NomLocal}}</h5><br>Modifier les champs necessaires d'être modifiés
+      <div class="row responsive-sm padding remvoeBP">
+        <div class="col">
+
+          <form ng-submit="Modify2()">
+            <div class="list list-inset removePM">
+              <label class="item item-input"><input type="text" value="{{b.NomLocal}}" placeholder="Nom :  {{b.NomLocal}}" ng-model="loginData.name"> </label>
+              <label class="item item-input"><input type="text" value="{{b.Ville}}" placeholder="Ville  : {{b.Ville}}" ng-model="loginData.ville"> </label>
+              <label class="item item-input"><input type="text" value="{{b.Quartier}}" placeholder="Quartier : {{b.Quartier}}" ng-model="loginData.quartier"> </label>
+              <label class="item item-input"><input type="text" value="{{b.NombNiveau}}" placeholder="Nombre d'appart par niveau : {{b.NombNiveau}}" ng-model="loginData.niveau"> </label>
+              <label class="item item-input"><input type="text" value="{{b.NombAppart}}" placeholder="Nombre d'appartement : {{b.NombAppart}}" ng-model="loginData.appart"> </label>
+           </div>
+
+            <div class="loginButton"><button class="button ion-android-menu button-block button-balanced" type="submit"> Modify </button>  </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

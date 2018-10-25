@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/www/css/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/services.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/achat.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/dashboard.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/gestion3.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/menu.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/modify1.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/modify2.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/modify3.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/paiement.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/parametre.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/profile-detail.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/profile4.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/profiles.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/tab-signin.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/tab-signup.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/versement.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/versement1.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/video.html" charset="UTF-8" />
+  </component>
+</project>

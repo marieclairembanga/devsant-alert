@@ -1,0 +1,21 @@
+
+<ion-view view-title="versement">
+  <ion-content>
+
+    <h4 class="content padding double-padding-x" >versement du loyer </h4>
+
+    <form ng-submit="verse()">
+
+
+      <label class="item item-input"><input type="number" ng-model="loginData.mtloyer" placeholder="Montant du loyer" > </label>
+      <label class="item item-input"><input type="text" ng-model="loginData.prloyer" placeholder="periode du loyer" > </label>
+      <label class="item item-input"><input type="text" ng-model="loginData.mode" placeholder="Mode de payement" > </label>
+
+      <div class="loginButton"><button class="button ios-arrow-dropright-circle-outline button-block button-balanced" type="submit"> Save </button>  </div>
+
+    </form>
+
+
+
+</ion-content>
+</ion-view>

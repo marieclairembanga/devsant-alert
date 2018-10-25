@@ -1,0 +1,52 @@
+<ion-side-menus enable-menu-with-back-views="false" >
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button id="leftMenu" class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-nav-view name="menuContent"></ion-nav-view>
+
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="loginBg" >
+
+    <ion-header-bar class="bar-assertive-900" ng-class="{expanded: isExpanded, 'has-header-fab-left': hasHeaderFabLeft, 'has-header-fab-right': hasHeaderFabRight}" align-title="left">
+      <div class="menu-bottom">
+       {{user}}
+      </div>
+    </ion-header-bar>
+    <ion-nav-view name="fabContent"></ion-nav-view>
+
+    <ion-content class="stable-bg has-expanded-header">
+      <ion-list data-componentid="list1" class=" " id="menu-list1">
+
+        <ion-item data-componentid="list-item1" style="" menu-close="" ui-sref="app.dashboard" id="menu-list-item1" class="item-icon-left  ">
+          <i class="icon ion-ios-home-outline"></i>Sant'alert</ion-item>
+        <ion-item data-componentid="list-item2" style="" menu-close="" ui-sref="app.profiles" id="menu-list-item2" class="item-icon-left  ">
+          <i class="icon ion-ios-pricetag-outline"></i>Suivi personnel</ion-item>
+        <!--  <ion-item data-componentid="list-item8" style="" menu-close="" ui-sref="app.video" id="menu-list-item8" class="item-icon-left  ">
+            <i class="icon ion-ios-cart-outline"></i>video</ion-item>  -->
+        <ion-item data-componentid="list-item4" style="" menu-close="" ui-sref="app.gestion3" id="menu-list-item4" class="item-icon-left  ">
+          <i class="icon ion-ios-help-outline"></i>Argenda</ion-item>
+        <ion-item data-componentid="list-item3" style="" menu-close="" ui-sref="app.gestion1" id="menu-list-item3" class="item-icon-left  ">
+            <i class="icon ion-ios-clock-outline"></i>Suivi mère et enfant</ion-item>
+          <ion-item data-componentid="list-item5" style="" menu-close="" ui-sref="app.gestion3" id="menu-list-item5" class="item-icon-left  ">
+            <i class="icon ion-ios-help-outline"></i>Suivi médical</ion-item>
+        <ion-item data-componentid="list-item6" style="" menu-close="" ui-sref="app.gestion3" id="menu-list-item6" class="item-icon-left  ">
+          <i class="icon ion-ios-help-outline"></i>Alert</ion-item>
+        <!--   <ion-item data-componentid="list-item6" style="" menu-close="" ui-sref="coud" id="menu-list-item9" class="item-icon-left  ">
+               <i class="icon ion-ios-cloud"></i>Cloud</ion-item>-->
+              <ion-item data-componentid="list-item7" style="" menu-close="" ui-sref="app.parametre" id="menu-list-item7" class="item-icon-left  ">
+                <i class="icon ion-ios-gear-outline"></i>Settings</ion-item>
+              <ion-item ng-controller="Ctrl" ng-click="out()" menu-close=""  data-componentid="list-item8" style="" id="menu-list-item8" class="item-icon-left  ">
+                <i class="icon ion-log-out"></i>Logout</ion-item>
+            </ion-list>
+          </ion-content>
+
+        </ion-side-menu>
+      </ion-side-menus>

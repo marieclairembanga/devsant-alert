@@ -1,0 +1,30 @@
+<ion-view view-title="Gestions des contrats et Locataires">
+  <ion-content>
+    <h5 class="content padding double-padding-x">Enregistrement des informations sur le locataire</h5>
+    <div class="row responsive-sm padding remvoeBP">
+      <div class="col">
+
+        <form ng-submit="Locataire()">
+          <div class="list list-inset removePM">
+            <label class="item item-input"><input type="text" placeholder="Nom et prenom Locataire" ng-model="loginData.name"> </label>
+            <label class="item item-input"><input type="text" placeholder="Téléphone" ng-model="loginData.tel"> </label>
+
+            <label class="item item-input"><input type="text" placeholder="Numero Matricule" ng-model="loginData.nummat"> </label>
+            <label class="item item-input"><input type="text" placeholder="email" ng-model="loginData.email1"> </label>
+            <label class="item item-input"><input type="text" placeholder="Adresse Postale" ng-model="loginData.post1"> </label>
+            <label class="item item-input"><input type="text" placeholder="Marque voiture" ng-model="loginData.mark"> </label>
+            <label class="item item-input"><input type="text" placeholder="Numero de matricule (voiture)" ng-model="loginData.num"> </label>
+
+
+          </div>
+
+          <div class="loginButton"><button class="button ion-person button-block button-balanced" type="submit"> save </button>  </div>
+          <div class="loginButton"><a class=" ion-person button-block"  href="#/app/locataire" style="text-align: center; position: relative;"> déjà un compte </a>  </div>
+
+        </form>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

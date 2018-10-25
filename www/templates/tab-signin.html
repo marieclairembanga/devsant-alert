@@ -1,0 +1,32 @@
+<div class="tabs-striped  tabs-background-positive tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item active" href="#/app/login"><i class="icon ion-unlocked"></i> Login</a>
+      <a class="tab-item" href="#/app/signup"> <i class="icon ion-person"></i> Sing Up </a>
+    </div>
+ </div>
+
+<ion-view view-title="Sign In" class="loginBg" hide-nav-bar="true" >
+<!-- <ion-nav-title><img src="img/logo.png" width="40"></ion-nav-title> -->
+
+  <ion-content class="padding"  style="background: url(img/login.jpg) center; background-size: cover;">
+
+  <div class="row responsive-sm padding remvoeBP">
+	  <div class="col">
+			<div class="app-logo" style="margin-right: 116px"><img src="img/logo6.png"  width="150" height="150"></div>
+
+      <form ng-submit="doLogin()">
+			<div class="list list-inset removePM">
+			  <label class="item item-input"><input type="text" ng-model="loginData.email" placeholder="Email Address" > </label>
+			  <label class="item item-input"><input type="password" ng-model="loginData.password" placeholder="Password" > </label>
+			</div>
+
+			<div class="loginButton"><button class="button ion-unlocked button-block button-balanced" type="submit" style="background-color: transparent; border-color: white;
+			border: 3px solid white"> Login </button>  </div>
+      </form>
+	   </div>
+  </div>
+
+
+
+  </ion-content>
+</ion-view>

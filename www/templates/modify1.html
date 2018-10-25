@@ -1,0 +1,38 @@
+<ion-view view-title="Modifier les informations d'un utilisateur ">
+  <ion-content >
+    <div class="" ng-repeat="b in profile">
+      <h5 class="content padding double-padding-x" >Modification de l'utilisateur :  {{b.NomUtil}}</h5><br>Modifier les champs necessaires d'être modifiés
+      <div class="row responsive-sm padding remvoeBP">
+        <div class="col">
+
+          <form ng-submit="Modify()">
+            <div class="list list-inset removePM">
+              <label class="item item-input"><input type="text" value="{{b.NomUtil}}" placeholder="nom :  {{b.NomUtil}}" ng-model="loginData.name"> </label>
+              <label class="item item-input"><input type="text" value="{{b.PrenomUtil}}" placeholder="prenom  : {{b.PrenomUtil}}" ng-model="loginData.prenom"> </label>
+              <label class="item item-input"><input type="text" value="{{b.TelephoneUtil}}" placeholder="telephone : {{b.TelephoneUtil}}" ng-model="loginData.tel"> </label>
+              <label class="item item-input"><input type="text" value="{{b.EmailUtil}}" placeholder="email : {{b.EmailUtil}}" ng-model="loginData.email"> </label>
+              <label class="item item-input"><input type="text" value="{{b.CategorieUtil}}" placeholder="Categorie : {{b.CategorieUtil}}" ng-model="loginData.cat"> </label>
+         <label class = "item item-input item-select">
+                <div class = "input-label" style="color: #0a9ec7;" >
+                  Acces : {{b.Acces}}
+                </div>
+
+                <select ng-model="loginData.acces">
+                  <option value="admin" >Admin</option>
+
+                  <option value="user" >User</option>
+                </select>
+              </label>
+
+            </div>
+
+            <div class="loginButton"><button class="button ion-android-menu button-block button-balanced" type="submit"> Modify </button>  </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

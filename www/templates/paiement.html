@@ -1,0 +1,17 @@
+<ion-view view-title="paiement ">
+  <ion-content >
+
+    <ion-list >
+      <h4 class="content padding double-padding-x" >Liste des Paiements effectuer</h4>
+      <div class="list animate-fade-slide-in-right">
+        <ion-item ng-repeat="b in profil" class="item item-avatar" href="#/app/versement1/{{b.IdPaiement}}">
+          <img ng-src="{{url}}logo/Money Bag_48px.png" height="45" width="45">
+          <div class="nom">{{b.Modepaiem}}</div>
+          <div class="detail">recu {{b.Montpaiement}} Fcfa  le  {{b.PeriodePaiem}}</div>
+          <div class="appart">Reste {{b.ResteAPayer}}</div>
+        </ion-item>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view view-title="locataire">
+  <ion-content>
+
+  <div class="row responsive-sm padding remvoeBP">
+      <div class="col">
+        <form ng-submit="search()">
+          <div class="list">
+            <label class="item item-input"><input type="search" ng-change="rech(name)" ng-model="name" placeholder="rechercher" style="border-radius: 15px"> </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <ion-list >
+      <h4 class="content padding double-padding-x">Liste des locataire enregistrés</h4>
+      <div class="list animate-fade-slide-in-right">
+        <ion-item ng-repeat="b in profil" class="item item-avatar" href="#/app/profile3/{{b.IdLocataire}}">
+          <img ng-src="{{url}}logo/avatar_defaut.png" height="45" width="45">
+          <div class="nom">{{b.NomLocataire}}</div>
+          <div class="detail">{{b.Telephone}} </div>
+          <div class="appart">{{b.AddPost}}</div>
+        </ion-item>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

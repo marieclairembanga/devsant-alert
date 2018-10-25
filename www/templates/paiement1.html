@@ -1,0 +1,53 @@
+<ion-view view-title="Contrat de location">
+  <ion-content>
+
+    <div class="list card">
+
+      <div class="item item-avatar" ng-repeat="profile in detail">
+
+        <img ng-src="{{url}}logo/Hand.png" height="100" width="100" style="border-radius: 50px">
+        <h2><span style="font-size: 17px; font-weight: bold; color: #005efe;">Appartement : {{profile.NomAppart}}</span></h2>
+
+      </div>
+
+      <div class="item item-body" ng-repeat="profile in profil">
+        <p>
+          Montant du loyer :  <span style="font-size: 16px; font-weight: bold; color: #005efe;">{{profile.Montant}}   </span><br><br>
+          Charge :  <span style="font-size: 16px; font-weight: bold; color: #005efe;">{{profile.Charge}}  </span><br><br>
+          periode :  <span style="font-size: 16px; font-weight: bold; color: #005efe;">{{profile.Periode}}  </span><br><br>
+          Caution :   <span style="font-size: 16px; font-weight: bold; color: #005efe;">{{profile.Caution}}  </span><br><br>
+          Categorie :   <span style="font-size: 16px; font-weight: bold; color: #005efe;">{{profile.Categorie}}  </span><br><br>
+          Numero Compteur :   <span style="font-size: 20px; font-weight: bold; color: #005efe;">{{profile.NumCompteur}}  </span><br><br>
+          Index Compteur :   <span style="font-size: 20px; font-weight: bold; color: #005efe;">{{profile.IndexCompteur}}  </span><br><br>
+          Rappel paiement :   <span style="font-size: 15px; font-weight: bold; color: #005efe;">{{profile.RappelPaiem}}  </span><br><br>
+          Condition de paiement :   <span style="font-size: 15px; font-weight: bold; color: #005efe;">{{profile.CondisPaiem}}  </span><br><br>
+          Date d'entrée :   <span style="font-size: 13px; font-weight: bold; color: #005efe;">{{profile.DateDebut}}  </span><br><br>
+          Date de fin du loyer :   <span style="font-size: 13px; font-weight: bold; color: #005efe;">{{profile.DateFin}}  </span><br><br>
+          Date de preavis :   <span style="font-size: 13px; font-weight: bold; color: #005efe;">{{profile.DatePreavie}}  </span><br><br>
+          Date de revision de contrat :   <span style="font-size: 13px; font-weight: bold; color: #005efe;">{{profile.DateRevis}}  </span><br><br>
+        </p>
+
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left" ng-repeat="profile in profil">
+
+        <a class="tab-item" href="#/app/versement/{{profile.IdAppart}}/{{profile.IdLocataire}}" style="color: #000088; font-size: 12px"> <i class="icon ion-android-cart"></i> Versement </a>
+        <!--  <a class="tab-item" href="#/app/ordre/{{profile.IdAppart}}/{{profile.IdLocataire}}" style="color: #000088; font-size: 12px"> <i class="icon ion-android-clipboard"></i> Ordre </a>
+         <a class="tab-item" href="#/app/modify/{{profile.IdLocal}}" style="color: #000088; font-size: 15px"> <i class="icon ion-android-menu"></i> Modifier</a>
+         --><a class="tab-item" href="#" style="color: #d91e18; font-size: 15px" ng-click="supp4(profile.IdAppart, profile.IdLocataire)" ng-if="acces=='admin'"> <i class="icon ion-android-delete" style="color: #d91e18;"></i>  Suprimer</a>
+      </div>
+    </div>
+
+    <ion-list >
+      <h4 class="content padding double-padding-x" ng-repeat="profile in profil">Liste des paiements<a class=" ion-android-add-circle" href="#/app/versement/{{profile.IdAppart}}/{{profile.IdLocataire}}" style="float: right; font-size: 30px"> </a></h4>
+      <div class="list animate-fade-slide-in-right">
+        <ion-item ng-repeat="b in control" class="item item-avatar" href="#/app/versement1/{{b.IdPaiement}}">
+          <img ng-src="{{url}}logo/Money Bag_48px.png" height="45" width="45">
+          <div class="nom">{{b.Modepaiem}}</div>
+          <div class="detail">recu {{b.Montpaiement}} Fcfa le  {{b.PeriodePaiem}}</div>
+          <div class="appart">Reste {{b.ResteAPayer}} Fcfa</div>
+        </ion-item>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="Gestions de location">
+  <ion-content>
+    <h5 class="content padding double-padding-x">Enregistrement dun local</h5>
+    <div class="row responsive-sm padding remvoeBP">
+      <div class="col">
+
+        <form ng-submit="Local()">
+          <div class="list list-inset removePM">
+            <label class="item item-input"><input type="text" placeholder="Nom local" ng-model="loginData.name"> </label>
+            <label class="item item-input"><input type="text" placeholder="ville" ng-model="loginData.ville"> </label>
+
+            <label class="item item-input"><input type="text" placeholder="quartier" ng-model="loginData.quartier"> </label>
+            <label class="item item-input"><input type="text" placeholder="nombre d'appart par niveau" ng-model="loginData.niveau"> </label>
+            <label class="item item-input"><input type="text" placeholder="nombre d'appart" ng-model="loginData.appart"> </label>
+
+          </div>
+
+          <div class="loginButton"><button class="button ion-person button-block button-balanced" type="submit"> save </button>  </div>
+
+        </form>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

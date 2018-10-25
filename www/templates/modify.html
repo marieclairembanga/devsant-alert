@@ -1,0 +1,30 @@
+<ion-view view-title="Modifier les informations du locataire ">
+  <ion-content >
+    <div class="" ng-repeat="b in profile">
+    <h5 class="content padding double-padding-x" >Modification du locataire :  {{b.NomLocataire}}</h5><br>Modifier les champs necessaires d'être modifiés
+    <div class="row responsive-sm padding remvoeBP">
+      <div class="col">
+
+        <form ng-submit="Modify()">
+          <div class="list list-inset removePM">
+            <label class="item item-input"><input type="text" value="{{b.NomLocataire}}" placeholder="nom :  {{b.NomLocataire}}" ng-model="loginData.name"> </label>
+            <label class="item item-input"><input type="text" value="{{b.NumMat}}" placeholder="identifiant CNI  : {{b.NumMat}}" ng-model="loginData.mat"> </label>
+            <label class="item item-input"><input type="text" value="{{b.Telephone}}" placeholder="telephone : {{b.Telephone}}" ng-model="loginData.tel"> </label>
+            <label class="item item-input"><input type="text" value="{{b.Email}}" placeholder="email : {{b.Email}}" ng-model="loginData.email"> </label>
+            <label class="item item-input"><input type="text" value="{{b.AddPost}}" placeholder="Adresse postale : {{b.AddPost}}" ng-model="loginData.post"> </label>
+            <label class="item item-input"><input type="text" value="{{b.MarqueVoiture}}" placeholder="Marque voiture : {{b.MarqueVoiture}}" ng-model="loginData.marque"> </label>
+            <label class="item item-input"><input type="text" value="{{b.NumMatVoiture}}" placeholder="imatriculation voiture : {{b.NumMatVoiture}}" ng-model="loginData.nummat"> </label>
+
+
+          </div>
+
+          <div class="loginButton"><button class="button ion-android-menu button-block button-balanced" type="submit"> Modify </button>  </div>
+
+        </form>
+      </div>
+    </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

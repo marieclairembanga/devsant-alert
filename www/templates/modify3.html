@@ -1,0 +1,28 @@
+<ion-view view-title="Modifier les informations d'un utilisateur ">
+  <ion-content >
+    <div class="" ng-repeat="b in profile">
+      <h5 class="content padding double-padding-x" >Modification de l'appartement :  {{b.NomAppart}}</h5><br>Modifier les champs necessaires d'être modifiés
+      <div class="row responsive-sm padding remvoeBP">
+        <div class="col">
+
+          <form ng-submit="Modify3()">
+            <div class="list list-inset removePM">
+              <label class="item item-input"><input type="text" value="{{b.NomAppart}}" placeholder="Nom :  {{b.NomAppart}}" ng-model="loginData.name"> </label>
+              <label class="item item-input"><input type="text" value="{{b.Niveau}}" placeholder="Niveau  : {{b.Niveau}}" ng-model="loginData.niveau"> </label>
+              <label class="item item-input"><input type="text" value="{{b.Occupe}}" placeholder="Occupe : {{b.Occupe}}" ng-model="loginData.occupe"> </label>
+              <label class="item item-input"><input type="text" value="{{b.Meuble}}" placeholder="Meuble : {{b.Meuble}}" ng-model="loginData.meuble"> </label>
+              <label class="item item-input"><input type="text" value="{{b.TypeAppart}}" placeholder="TypeAppart : {{b.TypeAppart}}" ng-model="loginData.type"> </label>
+              <label class="item item-input"><input type="text" value="{{b.Declarer}}" placeholder="Declare : {{b.Declarer}}" ng-model="loginData.declare"> </label>
+              <label class="item item-input"><input type="text" value="{{b.Montant}}" placeholder="Montant : {{b.Montant}}" ng-model="loginData.montant"> </label>
+            </div>
+
+            <div class="loginButton"><button class="button ion-android-menu button-block button-balanced" type="submit"> Modify </button>  </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

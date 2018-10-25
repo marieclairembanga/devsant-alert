@@ -1,0 +1,66 @@
+<ion-view view-title="Gestion des etats">
+  <ion-content>
+    <div class="list card" ng-if="acces=='admin'" >
+
+      <div class="item item-avatar" >
+
+        <img ng-src="{{url}}logo/US Dollar_48px.png" height="100" width="100" style="border-radius: 50px">
+        <h2><span style="font-size: 20px; font-weight: bold; color: #005efe;">Finances</span></h2>
+
+      </div>
+      <label class = "item item-input item-select">
+        <div class = "input-label" >
+          la residence
+        </div>
+
+        <select ng-model="select1" ng-change="recherche(select1)">
+          <option value="{{b.IdLocal}}" ng-repeat="b in select">{{b.NomLocal}}</option>
+        </select>
+      </label>
+      <div class="item item-body" ng-repeat="b in etat">
+        <p>
+          Nombre d'appartement occupé :  <span style="font-size: 16px; font-weight: bold; color: #005efe;" ng-repeat="b in etat">{{b.nbr}}  </span><br><br>
+          Nombre d'appartement non occupé :   <span style="font-size: 16px; font-weight: bold; color: #005efe;" ng-repeat="b in etat">{{b.nbr1}}  </span><br><br>
+          total charge :   <span style="font-size: 18px; font-weight: bold; color: #005efe;" ng-repeat="b in etat">  {{b.charge}}  </span>Fcfa<br><br>
+          total caution :   <span style="font-size: 18px; font-weight: bold; color: #005efe;" ng-repeat="b in etat">  {{b.caution}}  </span>Fcfa<br><br>
+          Prix total :   <span style="font-size: 18px; font-weight: bold; color: #005efe;" ng-repeat="b in etat">  {{b.montant}}  </span>Fcfa<br><br>
+        </p>
+      </div>
+
+    </div>
+
+
+
+
+
+      <h4> Gestion des etats </h4>
+
+    <div class="row responsive-sm padding remvoeBP">
+      <div class="col">
+        <form ng-submit="search()">
+          <div class="list">
+            <label class="item item-input"><input type="search" ng-change="rech(name)" ng-model="name" placeholder="rechercher par numero de compteur" style="border-radius: 15px"> </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <ion-list >
+      <h4 class="content padding double-padding-x">Liste des Contrats enregistrés</h4>
+      <div class="list animate-fade-slide-in-right">
+        <ion-item ng-repeat="b in profile" class="item item-avatar" href="#/app/paiement1/{{b.IdAppart}}/{{b.IdLocataire}}">
+          <img ng-src="{{url}}logo/Hand.png" height="45" width="45">
+          <div class="nom" style="color: #0000fe;">numero compteur {{b.NumCompteur}}</div>
+          <div class="detail">montant : {{b.Montant}} <br> Caution : {{b.Caution}}<br> Charge : {{b.Charge}}<br> Date debut : {{b.DateDebut}}<br> Date fin : {{b.DateFin}}</div>
+          <div class="appart">{{b.Categorie}}</div>
+          <div ng-if="b.RappelPaiem == 'payer'" style="float: left; color: blue;"> <i class="icon ion-android-checkmark-circle" style="color: blue;"></i> payer </div>
+          <div ng-if="b.RappelPaiem == 'impayer'" style="float: left; color: red;"> <i class="icon ion-android-cancel" style="color: red;"></i> impayer </div>
+
+        </ion-item>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

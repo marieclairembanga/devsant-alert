@@ -1,0 +1,29 @@
+<ion-view view-title="Parametre de l'application">
+  <ion-content>
+
+    <div class="row responsive-sm padding remvoeBP">
+      <div class="col">
+        <form ng-submit="search()">
+          <div class="list">
+            <label class="item item-input"><input type="search" ng-change="rech(name)" ng-model="name" placeholder="rechercher" style="border-radius: 15px"> </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <ion-list >
+      <h4 class="content padding double-padding-x">Liste des utilisateurs enregistrés</h4>
+      <div class="list animate-fade-slide-in-right">
+        <ion-item ng-repeat="b in profil" class="item item-avatar" href="#/app/profile4/{{b.IdUtil}}">
+          <img ng-src="{{url}}logo/avatar_defaut.png" height="45" width="45">
+          <div class="nom">{{b.NomUtil}}</div>
+          <div class="detail">Categorie {{b.CategorieUtil}} </div>
+          <div class="appart">{{b.Acces}}</div>
+        </ion-item>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

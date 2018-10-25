@@ -1,0 +1,28 @@
+<ion-view view-title="Locaux">
+  <ion-content>
+
+    <div class="list card">
+
+      <div class="item item-avatar" ng-repeat="profile in profil">
+
+        <h2><span style="font-size: 25px; font-weight: bold; color: #005efe;">{{profile.NomLocal}}</span></h2>
+
+      </div>
+
+      <div class="item item-body" ng-repeat="profile in profil">
+        <p>
+          Ville :  <span style="font-size: 20px; font-weight: bold; color: #005efe;">{{profile.Ville}}   </span><br><br>
+          Quartier :  <span style="font-size: 20px; font-weight: bold; color: #005efe;">{{profile.Quartier}}  </span><br><br>
+          Nombre d'appartement par niveau :  <span style="font-size: 20px; font-weight: bold; color: #005efe;">{{profile.NombNiveau}}  </span><br><br>
+          Nombre d'appartement :   <span style="font-size: 20px; font-weight: bold; color: #005efe;">{{profile.NombAppart}}  </span><br><br>
+        </p>
+
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left" ng-repeat="profile in profil">
+        <!-- <a class="tab-item" href="#/app/modify/{{profile.IdLocal}}" style="color: #000088; font-size: 15px"> <i class="icon ion-android-menu"></i> Modifier</a>
+        --><a class="tab-item" href="#" style="color: #d91e18; font-size: 15px" ng-click="supprime(profile.IdLocal)"> <i class="icon ion-android-delete" style="color: #d91e18;"></i>  Suprimer</a>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

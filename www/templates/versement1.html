@@ -1,0 +1,31 @@
+<ion-view view-title="locataire">
+  <ion-content>
+
+    <div class="list card">
+
+      <div class="item item-avatar" ng-repeat="profile in profil">
+
+        <img ng-src="{{url}}logo/Money Bag_48px.png" height="100" width="100" style="border-radius: 50px">
+        <h2><span style="font-size: 13px; font-weight: bold; color: #005efe;">Identifiant du payement {{profile.IdPaiement}}</span></h2>
+
+      </div>
+
+      <div class="item item-body" ng-repeat="profile in profil">
+        <p>
+          Montant du payement :  <span style="font-size: 14px; font-weight: bold; color: #005efe;">{{profile.Montpaiement}}  </span><br><br>
+          Periode :   <span style="font-size: 14px; font-weight: bold; color: #005efe;">{{profile.PeriodePaiem}}  </span><br><br>
+          Reste a payer :   <span style="font-size: 14px; font-weight: bold; color: #005efe;">{{profile.ResteAPayer}}  </span><br><br>
+          Mode de payement :   <span style="font-size: 14px; font-weight: bold; color: #005efe;">{{profile.Modepaiem}}  </span><br><br>
+        </p>
+
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left" ng-repeat="profile in detail">
+      <a class="tab-item" href="#" style="color: #d91e18; font-size: 10px"> <i class="icon ion-android-delete" style="color: #d91e18;"></i>  Suprimer</a>
+
+
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>
