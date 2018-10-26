@@ -74,7 +74,14 @@ p {
 .menu-open .ion-navicon:before {
   content: "\f2ca";
 }
-
+#form{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 
 /* Login
 ==================================*/

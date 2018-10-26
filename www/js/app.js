@@ -76,6 +76,17 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services'])
    },
 	authStatus: false
   })
+
+    .state('app.soins', {
+      url: '/Soins',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/Soins.html',
+          controller: 'AppCtrl1'
+        }
+      },
+      authStatus: false
+    })
 //--------------------------------------
 
 
