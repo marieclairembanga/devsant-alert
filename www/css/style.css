@@ -82,6 +82,13 @@ p {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+#circle-button-top{
+  position: fixed;
+  top: 75%;
+  left: 42%;
+  width: 100%;
+
+}
 
 /* Login
 ==================================*/

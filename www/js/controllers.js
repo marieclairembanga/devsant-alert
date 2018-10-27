@@ -48,6 +48,18 @@ angular.module('starter.controllers', [])
       }
 
     };
+    $scope.facebooksetup=function(){
+      $ionicPopup.alert({
+        title:'Not available',
+        template:'fonctionalité inaccessible créer un compte manuellement'
+      })
+    }
+    $scope.googlesetup=function(){
+      $ionicPopup.alert({
+        title:'Not available',
+        template:'fonctionalité inaccessible créer un compte manuellement'
+      })
+    }
 
     $scope.Logout=function(){
 
@@ -70,9 +82,46 @@ angular.module('starter.controllers', [])
 
     }
   })
+//addautomed()
+  .controller('DashCtrl',function($scope,sharedUtils,$ionicModal,$timeout,$ionicPopup,$http,$state,$ionicHistory) {
+    $scope.addautomed = function() {
+      $ionicPopup.alert({
+        title:'error',
+        template:'saisir les champs'
+      })
+     /* $scope.data = {};
 
+      //An elaborate, custom popup
+      var myPopup = $ionicPopup.show({
+        template: 'Date' + '<input type="date" >' +
+        'Symptome'+'< input type="test">'+
+        'Traitement'+'< input type="test">'+
+        'cout'+'< input type="number">'+
+        'avis /5'+'< input type="number">',
+        title: '',
+        subTitle: 'Please use normal things',
+        scope: $scope,
+        buttons: [
+          { text: 'Cancel' },
+          {
+            text: '<b>Save</b>',
+            type: 'button-positive',
 
-  .controller('AppCtrl1',function($scope,sharedUtils,$ionicModal,$timeout,$ionicPopup,$http,$state,$ionicHistory) {
+          }
+        ]
+      });
+
+      myPopup.then(function(res) {
+        console.log('Tapped!', res);
+      });
+
+      $timeout(function() {
+        myPopup.close(); //close the popup after 3 seconds for some reason
+      }, 3000);*/
+    };
+
+ })
+    .controller('AppCtrl1',function($scope,sharedUtils,$ionicModal,$timeout,$ionicPopup,$http,$state,$ionicHistory) {
     $scope.loginData={};
     $scope.url = url;
 

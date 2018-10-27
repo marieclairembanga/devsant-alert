@@ -1,22 +1,22 @@
 <div class="tabs-striped  tabs-background-positive tabs-color-light">
   <div class="tabs" tabsPlacement="Top">
     <a class="tab-item" href="#/app//dashboard"><i title="Soins"></i> Soins</a>
-    <a class="tab-item active" href="#/app/Soins"> <i title="Regimes"></i> Regimes </a>
-    <a class="tab-item" href="#/app/Bilan"> <i title="Bilan"></i>Bilan </a>
+    <a class="tab-item" href="#/app/Soins"> <i title="Regimes"></i> Regimes </a>
+    <a class="tab-item active" href="#/app/Bilan"> <i title="Bilan"></i>Bilan </a>
   </div>
 </div>
   <ion-view view-title="Suivi Personnel" hide-back-button="true">
     <ion-nav-bar class="bar-positive" style="float: right">
       <ion-nav-buttons>
         <button menu-toggle="left" class="button button-icon ion-navicon"> </button>
-        <button class="button item-button-left ion ion-android-refresh" click="parametre()"></button>
+        <button class="button item-button-left ion ion-backspace"  ng-click="parametre()"></button>
       </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content  >
-        <ion-list >
+      <ion-list >
 
           <div id="circle-button-top" class="loginButton"><button  onclick="addautomed()" class="button" style="background-color: dodgerblue; color: white; font-size: x-large; border-radius: 50% " >+</button>  </div>
-        </ion-list>
+      </ion-list>
 
 
     </ion-content>

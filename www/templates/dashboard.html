@@ -1,4 +1,12 @@
-<ion-view view-title="Sant'alert" hide-back-button="true">
+<div class="tabs-striped  tabs-background-positive tabs-color-light">
+  <div class="tabs">
+    <a class="tab-item active" href="#/app//dashboard"><i title="Soins"></i> Soins</a>
+    <a class="tab-item" href="#/app/Soins"> <i title="Regimes"></i> Regimes </a>
+    <a class="tab-item" href="#/app/Bilan"> <i title="Bilan"></i>Bilan </a>
+  </div>
+</div>
+
+<ion-view view-title="Suivi Personnel" hide-back-button="true">
   <ion-nav-bar class="bar-positive" style="float: right">
     <ion-nav-buttons>
       <button menu-toggle="left" class="button button-icon ion-navicon"> </button>
@@ -7,16 +15,8 @@
   </ion-nav-bar>
   <ion-content  >
     <ion-list >
-      <h4 class="content padding double-padding-x">Bienvenu sur Sant'alert<a class=" ion-android-add-circle"  href="#/app/locaux" style="float: right; font-size: 30px" ng-if="acces=='admin'"> </a></h4>
 
-      <div class="list animate-fade-slide-in-right">
-      <ion-item ng-repeat="b in profil" class="item item-avatar" href="#/app/profile/{{b.IdLocal}}">
-        <img ng-src="{{url}}logo/Pricing Structure_48px.png" height="45" width="45">
-        <div class="nom">{{b.NomLocal}}</div>
-        <div class="detail">{{b.Ville}} - {{b.Quartier}}</div>
-        <div class="appart">{{b.NombAppart}} apparts</div>
-      </ion-item>
-        </div>
+      <div id="circle-button-top" class="loginButton"><button  onclick="addautomed()" class="button" style="background-color: dodgerblue; color: white; font-size: x-large; border-radius: 50% " >+</button>  </div>
     </ion-list>
 
 

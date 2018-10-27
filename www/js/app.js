@@ -87,6 +87,16 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services'])
       },
       authStatus: false
     })
+    .state('app.bilan', {
+      url: '/Bilan',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/Bilan.html',
+          controller: 'AppCtrl1'
+        }
+      },
+      authStatus: false
+    })
 //--------------------------------------
 
 
@@ -94,7 +104,8 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services'])
     url: '/dashboard',
     views: {
       'menuContent': {
-        templateUrl: function(){
+        templateUrl: 'templates/dashboard.html'
+    /*function(){
 
       if(sessionStorage.getItem('loggedin_status')){
         return 'templates/dashboard.html';
@@ -102,7 +113,7 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services'])
         return 'templates/tab-signin.html';
       }
 
-    },
+    }*/,
 		controller: 'DashCtrl'
       }
      },
